@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   lem_in.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/21 18:18:41 by vpopovyc          #+#    #+#             */
-/*   Updated: 2017/03/21 18:18:45 by vpopovyc         ###   ########.fr       */
+/*   Created: 2017/03/21 20:03:01 by vpopovyc          #+#    #+#             */
+/*   Updated: 2017/03/21 20:03:07 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lem_in.h"
+#ifndef __LEM_IN_H
+# define __LEM_IN_H
 
-int main(int ac, char **av)
+# include "libft.h"
+
+typedef struct	s_acmx
 {
-	t_acmx	mx;
-	t_data	input;
-	char	*line;
+	short		**mx;
+}				t_acmx;
 
-	ft_get_input(&input);
-	ft_create_mx(&mx);
-	get_next_line(0, &line);
-	printf("%s\n", line);
-	return 0;
-}
+typedef struct	s_data
+{
+
+}				t_data;
+
+/* ft_fill_mx.c */
+void			ft_create_mx(t_acmx *mx);
+/* ft_get_input.c */
+void			ft_get_input(t_data *input);
+#endif

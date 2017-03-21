@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_get_input.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/21 18:18:41 by vpopovyc          #+#    #+#             */
-/*   Updated: 2017/03/21 18:18:45 by vpopovyc         ###   ########.fr       */
+/*   Created: 2017/03/21 21:11:09 by vpopovyc          #+#    #+#             */
+/*   Updated: 2017/03/21 21:11:13 by vpopovyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lem_in.h"
 
-int main(int ac, char **av)
+void	ft_get_input(t_data *input)
 {
-	t_acmx	mx;
-	t_data	input;
-	char	*line;
-
-	ft_get_input(&input);
-	ft_create_mx(&mx);
-	get_next_line(0, &line);
-	printf("%s\n", line);
-	return 0;
+	
 }
