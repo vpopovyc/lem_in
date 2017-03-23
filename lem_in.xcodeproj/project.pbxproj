@@ -26,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		97650A791E83E2A4009AD96A /* test_3.lemin */ = {isa = PBXFileReference; lastKnownFileType = text; name = test_3.lemin; path = test/test_3.lemin; sourceTree = SOURCE_ROOT; };
 		978CF96E1E81883100890A8E /* lem_in */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lem_in; sourceTree = BUILT_PRODUCTS_DIR; };
 		978CF9711E81883100890A8E /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; usesTabs = 1; };
 		978CF9821E81A16A00890A8E /* libft.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libft.a; path = libft/libft.a; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 		978CF9651E81883100890A8E = {
 			isa = PBXGroup;
 			children = (
+				97650A791E83E2A4009AD96A /* test_3.lemin */,
 				978CF9701E81883100890A8E /* src */,
 				978CF96F1E81883100890A8E /* Products */,
 				978CF9811E81A16A00890A8E /* Frameworks */,

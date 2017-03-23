@@ -50,8 +50,7 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES"
-      consoleMode = "1">
+      allowLocationSimulation = "YES">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
@@ -63,10 +62,6 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
-         <CommandLineArgument
-            argument = "&lt;"
-            isEnabled = "YES">
-         </CommandLineArgument>
          <CommandLineArgument
             argument = "/nfs/2016/v/vpopovyc/lem_in/test/test_3.lemin"
             isEnabled = "YES">
