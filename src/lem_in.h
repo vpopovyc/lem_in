@@ -23,10 +23,8 @@ typedef struct		s_acmx
 typedef struct		s_room
 {
 	char			flag;
-	short			x;
-	short			y;
 	char			*name;
-	char			*color;
+	int				id;
 	struct s_room	**edge;
 }					t_room;
 
@@ -53,3 +51,9 @@ void				ft_get_input(t_data *input);
 int					ft_get_number_of_lemings(char **sv, int fd);
 
 #endif /* __LEM_IN_H */
+
+/* To do 
+ * 
+ * parse all input 
+ * 
+ */

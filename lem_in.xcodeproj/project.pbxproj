@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		978CF97C1E818A8600890A8E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 978CF9711E81883100890A8E /* main.c */; };
 		978CF9831E81A16A00890A8E /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 978CF9821E81A16A00890A8E /* libft.a */; };
-		978CFA6E1E81A59500890A8E /* ft_fill_mx.c in Sources */ = {isa = PBXBuildFile; fileRef = 978CFA6D1E81A59500890A8E /* ft_fill_mx.c */; };
-		978CFA701E81B25D00890A8E /* ft_get_input.c in Sources */ = {isa = PBXBuildFile; fileRef = 978CFA6F1E81B25D00890A8E /* ft_get_input.c */; };
+		978CFA6E1E81A59500890A8E /* fill_mx.c in Sources */ = {isa = PBXBuildFile; fileRef = 978CFA6D1E81A59500890A8E /* fill_mx.c */; };
+		978CFA701E81B25D00890A8E /* get_input.c in Sources */ = {isa = PBXBuildFile; fileRef = 978CFA6F1E81B25D00890A8E /* get_input.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -148,8 +148,8 @@
 		978CFA6A1E81A1C500890A8E /* get_next_line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = get_next_line.h; path = libft/includes/get_next_line.h; sourceTree = "<group>"; };
 		978CFA6B1E81A1C500890A8E /* libft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = libft.h; path = libft/includes/libft.h; sourceTree = "<group>"; };
 		978CFA6C1E81A26100890A8E /* lem_in.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lem_in.h; sourceTree = "<group>"; };
-		978CFA6D1E81A59500890A8E /* ft_fill_mx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ft_fill_mx.c; sourceTree = "<group>"; };
-		978CFA6F1E81B25D00890A8E /* ft_get_input.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ft_get_input.c; sourceTree = "<group>"; };
+		978CFA6D1E81A59500890A8E /* fill_mx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fill_mx.c; sourceTree = "<group>"; };
+		978CFA6F1E81B25D00890A8E /* get_input.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = get_input.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,8 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				978CFA6C1E81A26100890A8E /* lem_in.h */,
-				978CFA6F1E81B25D00890A8E /* ft_get_input.c */,
-				978CFA6D1E81A59500890A8E /* ft_fill_mx.c */,
+				978CFA6F1E81B25D00890A8E /* get_input.c */,
+				978CFA6D1E81A59500890A8E /* fill_mx.c */,
 				978CF9711E81883100890A8E /* main.c */,
 			);
 			path = src;
@@ -401,8 +401,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				978CF97C1E818A8600890A8E /* main.c in Sources */,
-				978CFA6E1E81A59500890A8E /* ft_fill_mx.c in Sources */,
-				978CFA701E81B25D00890A8E /* ft_get_input.c in Sources */,
+				978CFA6E1E81A59500890A8E /* fill_mx.c in Sources */,
+				978CFA701E81B25D00890A8E /* get_input.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
