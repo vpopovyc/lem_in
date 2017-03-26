@@ -30,7 +30,6 @@ int main(int ac, char **av)
 	t_data	input;
 
 	ft_tdata_init(&input, av);
-	ft_get_input(&input);
-	ft_create_mx(&mx);
+	ft_get_input(&input, &mx);
 	return 0;
 }

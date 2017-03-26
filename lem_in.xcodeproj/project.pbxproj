@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		977B1EAA1E88024D0036A258 /* get_rooms.c in Sources */ = {isa = PBXBuildFile; fileRef = 977B1EA81E88024D0036A258 /* get_rooms.c */; };
+		977B1EAB1E88024D0036A258 /* root_binds.c in Sources */ = {isa = PBXBuildFile; fileRef = 977B1EA91E88024D0036A258 /* root_binds.c */; };
 		978CF97C1E818A8600890A8E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 978CF9711E81883100890A8E /* main.c */; };
 		978CF9831E81A16A00890A8E /* libft.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 978CF9821E81A16A00890A8E /* libft.a */; };
 		978CFA6E1E81A59500890A8E /* fill_mx.c in Sources */ = {isa = PBXBuildFile; fileRef = 978CFA6D1E81A59500890A8E /* fill_mx.c */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		97650A791E83E2A4009AD96A /* test_3.lemin */ = {isa = PBXFileReference; lastKnownFileType = text; name = test_3.lemin; path = test/test_3.lemin; sourceTree = SOURCE_ROOT; };
+		977B1EA81E88024D0036A258 /* get_rooms.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = get_rooms.c; sourceTree = "<group>"; };
+		977B1EA91E88024D0036A258 /* root_binds.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = root_binds.c; sourceTree = "<group>"; };
 		978CF96E1E81883100890A8E /* lem_in */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lem_in; sourceTree = BUILT_PRODUCTS_DIR; };
 		978CF9711E81883100890A8E /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; usesTabs = 1; };
 		978CF9821E81A16A00890A8E /* libft.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libft.a; path = libft/libft.a; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 		978CF9701E81883100890A8E /* src */ = {
 			isa = PBXGroup;
 			children = (
+				977B1EA81E88024D0036A258 /* get_rooms.c */,
+				977B1EA91E88024D0036A258 /* root_binds.c */,
 				978CFA6C1E81A26100890A8E /* lem_in.h */,
 				978CFA6F1E81B25D00890A8E /* get_input.c */,
 				978CFA6D1E81A59500890A8E /* fill_mx.c */,
@@ -403,6 +409,8 @@
 				978CF97C1E818A8600890A8E /* main.c in Sources */,
 				978CFA6E1E81A59500890A8E /* fill_mx.c in Sources */,
 				978CFA701E81B25D00890A8E /* get_input.c in Sources */,
+				977B1EAB1E88024D0036A258 /* root_binds.c in Sources */,
+				977B1EAA1E88024D0036A258 /* get_rooms.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

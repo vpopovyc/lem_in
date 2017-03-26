@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_get_input.c                                     :+:      :+:    :+:   */
+/*   get_input.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vpopovyc <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -25,91 +25,57 @@ int		ft_get_number_of_lemings(char **sv, int fd)
 	return (n);
 }
 
-t_room	*ft_create_room(char *name)
-{
-	t_room			*new;
-	static int		id;
-
-	new = (t_room*)ft_memalloc(sizeof(t_room));
-	new->name = name;
-	new->flag = 0;
-	new->id = id++;
-	return (new);
-}
-
-void	ft_check_room_info(char *line)
-{
-	char	flag;
-	
-	flag = 0;
-	while (*line && *line != ' ')
-	{
-		if (ft_issign(*line))
-		{
-			if ((flag ^ 0x1) & 0x2 || ft_issign(*line) == 1 || flag & 0x1)
-				flag |= 0x4;
-			flag |= 0x1;
-		}
-		else if (ft_isdigit(*line))
-			flag |= 0x2;
-		else
-			flag |= 0x4;
-		++line;
-	}
-	if ((flag ^ 0x3) & 0x4 || !((flag ^ 0x5) & 0x2))
-		ft_exit("Bad room info");
-} /* ended here [3] */
-
-void	ft_get_room(char *line, char *flag, char *color)
-{
-	char	*name;
-	char	*tmp;
-	char	fl;
-
-	fl = 0;
-	name = ft_strndup(line, ft_strclen(line, ' '));
-	tmp = ft_strstr(line, " ") + 1;
-
-	/* ended here [2] */
-}
-
-void	ft_flag_distribution(char *flag, char *line, char **color)
+void	ft_flag_distribution(char *flag, char *line)
 {
 	if (ft_strstr(line, "##start"))
 	{
-		if (*flag == 1 || *flag == 2)
+		if (*flag == 0x1 || *flag == 0x2 || *flag == 0x20)
 			ft_exit("Wrong general instructions");
-		*flag = 1;
+		*flag = 0x1;
 	}
 	else if (ft_strstr(line, "##end"))
 	{
-		if (*flag == 1 || *flag == 2)
+		if (*flag == 0x1 || *flag == 0x2 || *flag == 0x20)
 			ft_exit("Wrong general instructions");
-		*flag = 2;
+		*flag = 0x2;
 	}
 }
 
-void	ft_parse_rooms(t_root *root, int fd, char *sv)
+void	ft_line_managment(char *line, char *sv)
+{
+	sv = ft_strnfjoin(sv, line, ft_strlen(line));
+	ft_strdel(&line);
+}
+
+void	ft_parse(t_root *root, t_acmx *mx, int fd, char *sv)
 {
 	char	*line;
 	char	flag;
-/*	t_room	*node; */
+	t_room	*node;
 
-	color = NULL;
+	flag = 0;
 	while (get_next_line(fd, &line) > 0)
 	{
 		if (*line == '#')
-			ft_flag_distribution(&flag, line, &color);
+			ft_flag_distribution(&flag, line);
 		else if (ft_strstr(ft_strstr(line, " ") + 1, " "))
-			ft_get_room(line, flag, color);
-		/* ended here [1] */
+		{
+			node = ft_get_room(line, &flag);
+			ft_bind_to_root(root, &node);
+		}
+		else if (ft_strstr(line, "-"))
+			ft_get_edges(root, mx, line, &flag);
+		else                                         /* i'm not so sure about this */
+			ft_exit("Wrong order of input on stdin");
+		ft_line_managment(line, sv); /* Check if everything is written in the sv */
 	}
+	ft_strdel(&line);
 }
 
-void	ft_get_input(t_data *input)
+void	ft_get_input(t_data *input, t_acmx *mx)
 {
 	t_root	root;
 
 	input->leming_n = ft_get_number_of_lemings(&input->input, input->fd);
-	ft_parse_rooms(&root, input->fd, input->input);
+	ft_parse(&root, mx, input->fd, input->input);
 }
