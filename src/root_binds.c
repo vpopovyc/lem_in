@@ -18,7 +18,6 @@ t_room	**ft_rebind_rooms(t_room **old_binds, uint n_ofbinds)
 	int		i;
 	
 	i = -1;
-	n_ofbinds += 1;
 	new_binds = (t_room**)malloc(sizeof(t_room*) * (n_ofbinds + 1));
 	new_binds[n_ofbinds] = NULL;
 	while (++i != n_ofbinds)

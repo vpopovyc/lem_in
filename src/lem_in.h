@@ -30,7 +30,7 @@ typedef struct		s_room
 typedef struct		s_root
 {
 	char			flag;
-	static uint		n_ofbinds;
+	uint			n_ofbinds;
 	struct s_room	**binds;
 }					t_root;
 

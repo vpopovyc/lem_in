@@ -36,6 +36,7 @@ uint	ft_get_id_from_name(t_room **binds, char *name_to_find)
 		++i;
 	}
 	ft_exit("Can't find room name that corresponds following link");
+	return (0);
 }
 
 void	ft_insert_connection_by_ids(char **mx, uint id_1, uint id_2)
