@@ -28,8 +28,9 @@ int main(int ac, char **av)
 {
 	t_acmx	mx;
 	t_data	input;
+	t_root	root;
 
 	ft_tdata_init(&input, av);
-	ft_get_input(&input, &mx);
+	ft_get_input(&input, &mx, &root);
 	return 0;
 }

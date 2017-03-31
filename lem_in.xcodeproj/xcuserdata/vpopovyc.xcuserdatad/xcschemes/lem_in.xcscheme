@@ -64,6 +64,10 @@
       <CommandLineArguments>
          <CommandLineArgument
             argument = "/nfs/2016/v/vpopovyc/lem_in/test/test_3.lemin"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "/Users/vpopovyc/Documents/lem_in/test/test_3.lemin"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

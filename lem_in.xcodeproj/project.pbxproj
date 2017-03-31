@@ -29,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		97650A791E83E2A4009AD96A /* test_3.lemin */ = {isa = PBXFileReference; lastKnownFileType = text; name = test_3.lemin; path = test/test_3.lemin; sourceTree = SOURCE_ROOT; };
+		9771FE041E8E71A600E82325 /* mlx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mlx.h; path = libft/includes/mlx.h; sourceTree = "<group>"; };
 		977B1EA81E88024D0036A258 /* get_rooms.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = get_rooms.c; sourceTree = "<group>"; };
 		977B1EA91E88024D0036A258 /* root_binds.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = root_binds.c; sourceTree = "<group>"; };
 		978CF96E1E81883100890A8E /* lem_in */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lem_in; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,9 +190,9 @@
 		978CF9701E81883100890A8E /* src */ = {
 			isa = PBXGroup;
 			children = (
+				978CFA6C1E81A26100890A8E /* lem_in.h */,
 				977B1EA81E88024D0036A258 /* get_rooms.c */,
 				977B1EA91E88024D0036A258 /* root_binds.c */,
-				978CFA6C1E81A26100890A8E /* lem_in.h */,
 				978CFA6F1E81B25D00890A8E /* get_input.c */,
 				978CFA6D1E81A59500890A8E /* fill_mx.c */,
 				978CF9711E81883100890A8E /* main.c */,
@@ -339,6 +340,7 @@
 		978CF9861E81A19F00890A8E /* inc */ = {
 			isa = PBXGroup;
 			children = (
+				9771FE041E8E71A600E82325 /* mlx.h */,
 				978CFA671E81A1C500890A8E /* ft_fdf.h */,
 				978CFA681E81A1C500890A8E /* ft_fprintf.h */,
 				978CFA691E81A1C500890A8E /* ft_printf.h */,

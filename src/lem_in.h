@@ -51,21 +51,22 @@ uint				ft_get_id_from_name(t_room **binds, char *name_to_find);
 void				ft_null_it(char **mx, uint n);
 /* ft_get_input.c */
 void				ft_flag_distribution(char *flag, char *line);
-void				ft_line_managment(char *line, char *sv);
-void				ft_parse(t_root *root, t_acmx *mx, int fd, char *sv);
-void				ft_get_input(t_data *input, t_acmx *mx);
+void				ft_line_managment(char *line, char **sv);
+void				ft_parse(t_root *root, t_acmx *mx, int fd, char **sv);
+void				ft_get_input(t_data *input, t_acmx *mx, t_root *root);
 int					ft_get_number_of_lemings(char **sv, int fd);
 /* get_rooms.c */
 t_room				*ft_create_room(char *name, char *flag);
 void				ft_check_room_info(char *line);
 t_room				*ft_get_room(char *line, char *flag);
 /* root_binds.c */
+void                ft_validate_names_to_instructions(t_room **binds, int n);
 t_room				**ft_rebind_rooms(t_room **old_binds, uint n_ofbinds);
 void				ft_bind_to_root(t_root *root, t_room **node);
 #endif /* __LEM_IN_H */
 
 /* To do 
  * 
- * parse all input 
+ * parsed and leak cured
  * 
  */

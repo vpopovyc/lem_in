@@ -41,13 +41,14 @@ void	ft_flag_distribution(char *flag, char *line)
 	}
 }
 
-/*void	ft_line_managment(char *line, char *sv)
+void	ft_line_managment(char *line, char **sv)
 {
-	sv = ft_strnfjoin(sv, line, ft_strlen(line));
+    *sv = ft_strnfjoin(*sv, "\n", 1);
+	*sv = ft_strnfjoin(*sv, line, ft_strlen(line));
 	ft_strdel(&line);
-}*/
+}
 
-void	ft_parse(t_root *root, t_acmx *mx, int fd, char *sv)
+void	ft_parse(t_root *root, t_acmx *mx, int fd, char **sv)
 {
 	char	*line;
 	char	flag;
@@ -69,18 +70,16 @@ void	ft_parse(t_root *root, t_acmx *mx, int fd, char *sv)
 		}
 		else if (ft_strstr(line, "-"))
 			ft_get_edges(root, mx, line, &flag);
-		else                                         /* i'm not so sure about this */
+		else
 			ft_exit("Wrong order of input on stdin");
-	/*	ft_line_managment(line, sv);  Check if everything is written in the sv */
+		ft_line_managment(line, sv);
 	}
-	ft_strdel(&line);
 }
 
-void	ft_get_input(t_data *input, t_acmx *mx)
+void	ft_get_input(t_data *input, t_acmx *mx, t_root *root)
 {
-	t_root	root;
-
 	input->leming_n = ft_get_number_of_lemings(&input->input, input->fd);
-	root.n_ofbinds = 0;
-	ft_parse(&root, mx, input->fd, input->input);
+	root->n_ofbinds = 0;
+	ft_parse(root, mx, input->fd, &input->input);
+    ft_validate_names_to_instructions(root->binds, (int)root->n_ofbinds);
 }
