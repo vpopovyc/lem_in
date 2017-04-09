@@ -80,6 +80,7 @@ void	ft_get_input(t_data *input, t_acmx *mx, t_root *root)
 {
 	input->leming_n = ft_get_number_of_lemings(&input->input, input->fd);
 	root->n_ofbinds = 0;
+    root->n_ofpaths = 0;
 	ft_parse(root, mx, input->fd, &input->input);
     ft_validate_names_to_instructions(root->binds, (int)root->n_ofbinds);
 }

@@ -18,7 +18,7 @@
 
 typedef struct				s_stack_elem
 {
-	int						id;
+	short					id;
 	struct s_stack_elem		*top_elem;
 	struct s_stack_elem		*bot_elem;
 }							t_stack_elem;

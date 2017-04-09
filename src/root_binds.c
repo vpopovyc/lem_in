@@ -22,13 +22,13 @@ void    ft_validate_names_to_instructions(t_room **binds, int n)
         if (((*(binds + n))->flag) == 0x1)
         {
             if ((v_flag ^ 0x2) & 0x1)
-                ft_exit("One general instuctions duplicated");
+                ft_exit("Wrong general instuctions: duplicated");
             v_flag |= 0x1;
         }
         if (((*(binds + n))->flag) == 0x2)
         {
             if ((v_flag ^ 0x1) & 0x2)
-                ft_exit("Wrong general instuctions duplicated");
+                ft_exit("Wrong general instuctions: duplicated");
             v_flag |= 0x2;
         }
     }
@@ -58,5 +58,9 @@ void	ft_bind_to_root(t_root *root, t_room **node)
 	root->n_ofbinds += 1;
 	new_binds = ft_rebind_rooms(root->binds, root->n_ofbinds);
 	new_binds[root->n_ofbinds - 1] = *node;
+    if ((*node)->flag == 0x1)
+        root->start = (*node)->id;
+    else if ((*node)->flag == 0x2)
+        root->end = (*node)->id;
 	root->binds = new_binds;
 }

@@ -14,6 +14,14 @@
 # define __LEM_IN_H
 
 # include "libft.h"
+# include "stack.h"
+
+# define MARKED         1
+# define UNMARK         0
+# define START_VERTEX   0
+# define CON_EXST       1
+# define NO_CONN        0
+# define NOT_MARKED     0
 
 typedef struct		s_acmx
 {
@@ -27,11 +35,21 @@ typedef struct		s_room
 	uint			id;
 }					t_room;
 
+typedef struct      s_path
+{
+    char            *path;
+    uint            lenght;
+}                   t_path;
+
 typedef struct		s_root
 {
 	char			flag;
+    uint            start;
+    uint            end;
 	uint			n_ofbinds;
+    uint            n_ofpaths;
 	struct s_room	**binds;
+    struct s_path   **path_set;
 }					t_root;
 
 typedef struct		s_data
@@ -63,6 +81,13 @@ t_room				*ft_get_room(char *line, char *flag);
 void                ft_validate_names_to_instructions(t_room **binds, int n);
 t_room				**ft_rebind_rooms(t_room **old_binds, uint n_ofbinds);
 void				ft_bind_to_root(t_root *root, t_room **node);
+/* connection_component.c */
+void                ft_charzero(char ar[], size_t n);
+void                ft_find_connection_component(char **acmx, int n_of_vertics);
+/* paths_traversal.c */
+void                ft_path_traversal(t_root *root, char **acmx, uint n_max);
+/* root_path_set.c */
+void                ft_path_to_root(t_root *root, t_stack stack);
 #endif /* __LEM_IN_H */
 
 /* To do 

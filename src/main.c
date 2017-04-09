@@ -32,5 +32,7 @@ int main(int ac, char **av)
 
 	ft_tdata_init(&input, av);
 	ft_get_input(&input, &mx, &root);
+	ft_find_connection_component(mx.acmx, root.n_ofbinds);
+	ft_path_traversal(&root, mx.acmx, root.n_ofbinds);
 	return 0;
 }
