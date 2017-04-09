@@ -30,6 +30,12 @@
 /* Begin PBXFileReference section */
 		97650A791E83E2A4009AD96A /* test_3.lemin */ = {isa = PBXFileReference; lastKnownFileType = text; name = test_3.lemin; path = test/test_3.lemin; sourceTree = SOURCE_ROOT; };
 		9771FE041E8E71A600E82325 /* mlx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mlx.h; path = libft/includes/mlx.h; sourceTree = "<group>"; };
+		977772131E9A69740082857F /* bfs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = bfs.c; path = "dfc && bfs/bfs.c"; sourceTree = "<group>"; };
+		977772141E9A69740082857F /* dfs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dfs.c; path = "dfc && bfs/dfs.c"; sourceTree = "<group>"; };
+		977772151E9A69740082857F /* print_stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = print_stack.c; path = "dfc && bfs/print_stack.c"; sourceTree = "<group>"; };
+		977772161E9A69740082857F /* queue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = queue.c; path = "dfc && bfs/queue.c"; sourceTree = "<group>"; };
+		977772171E9A69740082857F /* stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = stack.c; path = "dfc && bfs/stack.c"; sourceTree = "<group>"; };
+		977772181E9A69740082857F /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stack.h; path = "dfc && bfs/stack.h"; sourceTree = "<group>"; };
 		977B1EA81E88024D0036A258 /* get_rooms.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = get_rooms.c; sourceTree = "<group>"; };
 		977B1EA91E88024D0036A258 /* root_binds.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = root_binds.c; sourceTree = "<group>"; };
 		978CF96E1E81883100890A8E /* lem_in */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lem_in; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,10 +175,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		977772121E9A695D0082857F /* DFS & BFS */ = {
+			isa = PBXGroup;
+			children = (
+				977772131E9A69740082857F /* bfs.c */,
+				977772141E9A69740082857F /* dfs.c */,
+				977772151E9A69740082857F /* print_stack.c */,
+				977772161E9A69740082857F /* queue.c */,
+				977772171E9A69740082857F /* stack.c */,
+				977772181E9A69740082857F /* stack.h */,
+			);
+			name = "DFS & BFS";
+			sourceTree = "<group>";
+		};
 		978CF9651E81883100890A8E = {
 			isa = PBXGroup;
 			children = (
 				97650A791E83E2A4009AD96A /* test_3.lemin */,
+				977772121E9A695D0082857F /* DFS & BFS */,
 				978CF9701E81883100890A8E /* src */,
 				978CF96F1E81883100890A8E /* Products */,
 				978CF9811E81A16A00890A8E /* Frameworks */,
